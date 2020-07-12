@@ -2,109 +2,18 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <script src="script.js"></script>
         <title>
             Rock paper scissors
         </title>
     </head>
     <body>
-        <script>
-            function computerPlay() {
-                let num = Math.floor(Math.random() * (3-0))+1;
-                switch (num) {
-                    case 1:
-                        return "Rock";
-                        break;
-                    case 2:
-                        return "Paper";
-                    case 3:
-                        return "Scissors"
-                        break;
-                }
-            }
-            function playRound(playerSelection, computerSelection) {
-                if (playerSelection.toLowerCase() === "rock" || playerSelection.toLowerCase() === "paper" || playerSelection.toLowerCase() === "scissors") {
-                    switch (playerSelection.toLowerCase()) {
-                    case "rock":
-                        if(computerSelection.toLowerCase() === "scissors"){
-                            return 1;
-                        }
-                        else return 0;
-                        break;
-                    case "paper":
-                        if(computerSelection.toLowerCase() === "rock"){
-                            return 1;
-                        }
-                        else return 0;
-                        break;
-                    case "scissors":
-                        if (computer.computerSelection.toLowerCase() === "paper") {
-                            return 1;
-                        } 
-                        else return 0;
-                        break;
-                    default:
-                        return 2;
-                        break;
-                    }
-                }
-                else return "Error, wrong input!"
-            }
-            function winAlert(selection) {
-                switch (selection.toLowerCase()) {
-                    case "rock":
-                        alert("You win! Rock beats scissors!");
-                        break;
-                    case "paper":
-                        alert("You win! Paper beats rock!");
-                        break;
-                    case "scissors":
-                        alert("You win! Scissors beats paper!");
-                        break;
-                }
-            }
-            function loseAlert(selection) {
-                switch (selection.toLowerCase()) {
-                    case "rock":
-                        alert("You lose! Paper beats rock!");
-                        break;
-                    case "paper":
-                        alert("You lose! Scissors beats paper!");
-                        break;
-                    case "scissors":
-                        alert("You lose! Rock beats scissors!");
-                        break;
-                }
-            }
-            function game() {
-                let computerScore = 0;
-                let playerScore = 0;
-                let roundLimitPrompt = prompt("Choose your amount of rounds to be played");
-                let roundLimit = Number(roundLimitPrompt);
-                for (let round = 1; round <= roundLimit; round++) {
-                    let playerSelection = prompt("Choose rock, paper or scissors");
-                    if(playRound(playerSelection, computerPlay()) === 1){
-                        winAlert(playerSelection.toLowerCase());
-                        playerScore++;
-                    }
-                    else if(playRound(playerSelection, computerPlay()) === 0){
-                        loseAlert(playerSelection.toLowerCase());
-                        computerScore++;
-                    }
-                    else {
-                        roundLimit++;
-                        alert("TIE!");
-                    }
-                }
-                let playerState = "";
-                if(playerScore > computerScore){
-                    playerState = "win";
-                }
-                else if (playerScore < computerScore) {
-                    playerState = "lose"
-                }
-                else playerState = "tied"
-                alert(`You ${playerScore} - ${computerScore} computer. You ${playerState}`);
-            }
-        </script>
+        <h1>ROCK, PAPER, SCISSORS!</h1>
+        <P>
+            In the popup window you will have to choose your weapon type <b>(rock, paper or scissors)</b>, then press enter <em>(keyboard enter works as well)</em><br>
+            Press the button to start the game.<br>
+            <input type="number" placeholder="Enter number of rounds" id="rounds">
+            <button onclick="game()">Start the game</button>
+        </P>
     </body>
 </html>
