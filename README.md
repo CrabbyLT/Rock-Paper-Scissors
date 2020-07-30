@@ -3,6 +3,9 @@
 [The Odin project](https://www.theodinproject.com "The Odin Project website")
 <em>
 
+## Version 1.3
+Revamped interface a bit. Still not colorful or flashy.
+
 ## Version 1.2
 Added some info in the homepage and added round counter
 
@@ -14,5 +17,6 @@ Console only gamemode
 
 ### /TODO:
 * Add a more beutiful front-end;
-* Get rid of <em>alerts and promts</em> (cause they are annoying)
+* ~~Get rid of <em>alerts and promts</em> (cause they are annoying)~~
 * Make a bot on bot action :thinking: :thinking:
+* Make round limit
