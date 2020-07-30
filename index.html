@@ -2,18 +2,34 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
         <title>
             Rock paper scissors
         </title>
     </head>
     <body>
         <h1>ROCK, PAPER, SCISSORS!</h1>
-        <P>
-            In the popup window you will have to choose your weapon type <b>(rock, paper or scissors)</b>, then press enter <em>(keyboard enter works as well)</em><br>
-            Press the button to start the game.<br>
-            <input type="number" placeholder="Enter number of rounds" id="rounds">
-            <button onclick="game()">Start the game</button>
-        </P>
+        <p id="gameIntro">
+            Press <em>start</em> to start the game. Currently this game as no round limit(Working on the fix)<br>
+            <!-- <input type="number" placeholder="Enter number of rounds" id="rounds"> Not working -->
+            <button id="play">Start</button>
+        </p>
+        <p id="gameInfo">
+            Rounds: <span id="maxRounds">0</span><br>
+            <span id="pScore">0</span>
+            <b>-</b>
+            <span id="cScore">0</span>
+        </p>
+        <p id="game">
+            <h4 id="roundMsg">Waiting for game start..</h4>
+            <br>
+            <div id="buttons">
+                <button id="rock">ROCK</button>
+                <button id="paper">PAPER</button>
+                <button id="scissors">SCISSORS</button>
+            </div>
+        </p>
+        
+        <script src="script.js"></script>
     </body>
 </html>

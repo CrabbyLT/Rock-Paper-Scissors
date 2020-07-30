@@ -1,0 +1,11 @@
+#score{
+    font-size: xx-large;
+}
+
+#buttons{
+    visibility: hidden;
+}
+
+#gameInfo{
+    visibility: hidden;
+}
